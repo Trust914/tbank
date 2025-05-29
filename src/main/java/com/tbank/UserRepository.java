@@ -128,7 +128,7 @@ public  final class UserRepository{
                            %s$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                                             GOODBYE %s
                            $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%s            
-                           """,Colours.ART,username,Colours.RESET);
+                           """,Colour.ART,username,Colour.RESET);
     }
 
     private static void showWelcomeMessage(String username){
@@ -137,7 +137,7 @@ public  final class UserRepository{
                            %s$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                                             WELCOME %s  
                            $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%s            
-                           """,Colours.ART,username,Colours.RESET);
+                           """,Colour.ART,username,Colour.RESET);
     }
 
     private boolean isAuthenticatedUser(){
@@ -279,7 +279,7 @@ public  final class UserRepository{
         HashMap<String, String> loginData = new HashMap<>();
         String username,password;
 
-        System.out.printf("\n\n%s$$$$$$$$$$$$$$$$$$$$$ USER LOGIN $$$$$$$$$$$$$$$$$$$$$%s\n",Colours.INFO,Colours.RESET);
+        System.out.printf("\n\n%s$$$$$$$$$$$$$$$$$$$$$ USER LOGIN $$$$$$$$$$$$$$$$$$$$$%s\n",Colour.INFO,Colour.RESET);
         // AppLogger.info("\n*************************** User Login ********************************");
 
         username = Util.getStringInput("Enter your username", null);
@@ -337,7 +337,7 @@ public  final class UserRepository{
         HashMap<String, String> registerData = new HashMap<>();
         String firstName, lastName, username, email, password;
 
-        System.out.printf("\n\n%s$$$$$$$$$$$$$$$$$$$$$ NEW USER REGISTRATION $$$$$$$$$$$$$$$$$$$$$%s\n",Colours.INFO,Colours.RESET);
+        System.out.printf("\n\n%s$$$$$$$$$$$$$$$$$$$$$ NEW USER REGISTRATION $$$$$$$$$$$$$$$$$$$$$%s\n",Colour.INFO,Colour.RESET);
         // AppLogger.info("\n************************** New user registration ********************************");
 
         firstName = Util.getStringInput("Enter your first name",null);
@@ -511,7 +511,7 @@ public  final class UserRepository{
         Util.clearConsole(false);
         showWelcomeMessage(this.userDetails.get("username").toString());
         String userId = (String)this.userDetails.get("_id");
-        System.out.printf("\n\n%s$$$$$$$$$$$$$$ NEW BANK ACCOUNT CREATION $$$$$$$$$$$$$$%s\n",Colours.INFO,Colours.RESET);
+        System.out.printf("\n\n%s$$$$$$$$$$$$$$ NEW BANK ACCOUNT CREATION $$$$$$$$$$$$$$%s\n",Colour.INFO,Colour.RESET);
         if (this.userRole.equals("admin")){
             String customerId = Util.getStringInput(String.format("Hey %s, enter the ID of the customer you want to create an account for",this.userDetails.get("username")), null);
             // Logger.debug(String.format("customer ID %d", customerId));
@@ -714,9 +714,9 @@ public  final class UserRepository{
                     continue;
                 }
                 ++i;
-                System.out.printf("\n%s*****************\n USER %d \n*********************\n",Colours.ART,i);
+                System.out.printf("\n%s*****************\n USER %d \n*********************\n",Colour.ART,i);
                 System.out.println(user);
-                System.out.println(Colours.RESET);
+                System.out.println(Colour.RESET);
             }
         } catch (Exception e) {
             String errorClass = e.getClass().toString();

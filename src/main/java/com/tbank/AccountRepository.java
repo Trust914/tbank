@@ -421,9 +421,9 @@ public final class AccountRepository {
             ArrayList<BankAccount> accounts = DB.getAll();
             int i = 0;
             for(BankAccount account: accounts){
-                System.out.printf("\n%s*****************\n ACCOUNT %d \n*********************\n",Colours.ART,i);
+                System.out.printf("\n%s*****************\n ACCOUNT %d \n*********************\n",Colour.ART,i);
                 System.out.println(account);
-                System.out.println(Colours.RESET);
+                System.out.println(Colour.RESET);
             }
         } 
         catch (NullPointerException e){

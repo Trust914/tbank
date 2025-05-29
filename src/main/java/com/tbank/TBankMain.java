@@ -8,7 +8,7 @@ public class TBankMain {
                                        $$$              THIS IS THE TBANK               $$$
                                        $$$                                              $$$
                                        $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%s
-                                       """,Colours.ART,Colours.RESET);
+                                       """,Colour.ART,Colour.RESET);
     public static void main(String[] args) {
         while (true) {
             Util.clearConsole(false);
@@ -53,6 +53,6 @@ public class TBankMain {
                            %s$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                                                   GOODBYE   
                            $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%s            
-                           """,Colours.ART,Colours.RESET);
+                           """,Colour.ART,Colour.RESET);
     }
 }
